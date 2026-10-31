@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Light vs Dark Mode - Dynamic Island Glass Effect</title>
+    <style>
+        body {
+            margin: 0;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            background: white;
+        }
+
+        .kolchi {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        .lkhiyar {
+            flex: 1;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .light-mode {
+            background: #ffffff;
+        }
+
+        .dark-mode {
+            background: #121212;
+        }
+
+        .lmohtawa {
+            position: relative;
+            width: 450px;
+            margin-top: 0;
+        }
+
+        #logo {
+            width: 250px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .light-mode .glass-card {
+            width: 400px;
+            height: 60px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: rgba(0, 0, 0, 0.03);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 40px;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.06);
+        }
+
+        .dark-mode .glass-card {
+            width: 400px;
+            height: 60px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="kolchi">
+        <div class="lkhiyar light-mode">
+            <div class="lmohtawa">
+                <img src="./logo WITHOUT BG theme.svg" alt="Logo" id="logo">
+                <div class="glass-card"></div>
+            </div>
+        </div>
+
+        <div class="lkhiyar dark-mode">
+            <div class="lmohtawa">
+                <img src="./logo WITHOUT BG theme.svg" alt="Logo" id="logo">
+                <div class="glass-card"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
